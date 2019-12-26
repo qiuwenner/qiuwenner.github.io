@@ -1,8 +1,17 @@
 <!DOCTYPE html> 
 <html>
 	<head> 
-		<meta charset="utf-8" /> 
-		<title>博客</title> 
+		<meta charset="utf-8" /> <!-- 使用 <meta> 元素来描述HTML文档的描述，关键词，作者，字符集等。 -->
+		<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"> <!-- 为搜索引擎定义关键词 -->
+		<meta name="description" content="免费 Web & 编程 教程"> <!-- 为网页定义描述内容 -->
+		<meta name="author" content="Wenner"> <!-- 定义网页作者 -->
+		<!-- <meta http-equiv="refresh" content="5"> 每 秒钟刷新当前页面 -->
+
+		<!-- 带log的标题 -->
+		<link rel="icon" href="elf.png">
+		<title>Wenner's Blog</title> 
+
+		<base href="res/" target="_blank"> <!-- 使用 <base> 定义页面中所有链接默认的链接目标地址。 -->
 		<style> 
 			body{text-align:center} 
 			span{color:red}
@@ -12,11 +21,11 @@
 	<body> 
 		<!-- 标题 -->
 		<h1>
-			<span>This is qiuwenner's blog</span> 
+			<span id="h1">This is Wenner's Blog</span> 
 		</h1>
 
 		<!-- 分割线 -->
-		<hr />
+		<hr/>
 		
 		<!-- 段落 -->
 		<p>
@@ -28,11 +37,38 @@
 		</p>
 
 		<!-- 链接 -->
-		<a href="https://qiuwenner.github.io">这是我的GitHub</a>
+		<a href="https://qiuwenner.github.io" alt="我的博客" target="_blank">这是我的GitHub</a>
+
+		<!-- 上下标 -->
 		<br>
+		这个文本包含<sub>下标</sub>
+		<br>
+		这个文本包含<sup>上标</sup>
 
 		<!-- 图片 -->
-		<img src="res/img1.jpg"><br>
+		<br>
+		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+
+		<!-- 图片链接 -->
+		<p>猫
+			<a href="https://github.com/" target="_blank">
+				<img border="0" src="cat.png" alt="cat" width="50" height="50"> <!-- 原图 98x98 -->
+			</a>
+		</p>
+		<p>狗
+			<a href="https://github.com/" target="_blank">
+				<img border="0" src="dog.png" alt="cat" width="50" height="50"> 
+			</a>
+		</p>
+
+		<!-- 跳转到指定位置 -->
+		<!-- <a href="#h1">查看社会主义核心价值观图片</a> -->
 
 	</body> 
 </html>
