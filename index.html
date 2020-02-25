@@ -8,19 +8,29 @@
 		<!-- <meta http-equiv="refresh" content="5"> 每 秒钟刷新当前页面 -->
 
 		<!-- 带log的标题 -->
-		<link rel="icon" href="elf.png">
+		<link rel="icon" href="res/elf.png">
 		<title>Wenner's Blog</title> 
 
-		<base href="res/" target="_blank"> <!-- 使用 <base> 定义页面中所有链接默认的链接目标地址。 -->
+		<!-- 使用 <base> 定义页面中所有链接默认的链接目标地址。 -->
+		<!-- <base href="res/" target="_blank">  -->
+
 		<style> 
-			body{text-align:center} 
+			/* 文字居中 */
+			/* body{text-align:center}  */
 			span{color:red}
 		</style> 
 		
 	</head> 
 	<body> 
-		<!-- 标题 -->
-		<h1>
+	<!-- 页面背景颜色 -->
+	<!-- <body style="background-color: bisque;">  -->
+
+		<!-- <div style="color:#40B3DF;">Colors
+			<span style="background-color:#B4009E;color:#00ffff;">Boxes</span>
+		</div> -->
+
+		<!-- 标题 居中-->
+		<h1 align="center">
 			<span id="h1">This is Wenner's Blog</span> 
 		</h1>
 
@@ -47,28 +57,97 @@
 
 		<!-- 图片 -->
 		<br>
-		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
-		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
-		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
-		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
-		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
-		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
-		<img id="img1" src="img1.jpg" alt="社会主义核心价值观">
+		<img id="img1" src="res/img1.jpg" alt="社会主义核心价值观" width="150" height="100">
 
 		<!-- 图片链接 -->
 		<p>猫
 			<a href="https://github.com/" target="_blank">
-				<img border="0" src="cat.png" alt="cat" width="50" height="50"> <!-- 原图 98x98 -->
+				<img border="0" src="res/cat.png" alt="cat" width="50" height="50"> <!-- 原图 98x98 -->
 			</a>
 		</p>
 		<p>狗
 			<a href="https://github.com/" target="_blank">
-				<img border="0" src="dog.png" alt="cat" width="50" height="50"> 
+				<img border="0" src="res/dog.png" alt="cat" wdth="50" height="50"> 
 			</a>
 		</p>
 
 		<!-- 跳转到指定位置 -->
 		<!-- <a href="#h1">查看社会主义核心价值观图片</a> -->
+
+		<!-- 表格 三行三列 -->
+		<!-- <table> -->
+		<table border="1" cellpadding="10" cellspacing="0"> <!--border:边框 cellpadding:单元格边距 cellspacing:单元格间距 -->
+			<!-- 标题 -->
+			<caption>table title</caption>
+			<!-- 行 table row-->
+			<tr>
+				<!-- 表头 table head-->
+				<th>Head 1</th>
+				<th>Head 2</th>
+				<th>Head 3</th>
+			</tr>
+			<tr>
+				<!-- 内容 table data -->
+				<td>100</td>
+				<td>200</td>
+				<td>300</td>
+			</tr>
+		</table>
+
+		<!-- 无序列表 -->
+		<ul>无序列表
+			<li>coffee</li>
+			<li>tea</li>
+			<li>milk</li>
+		</ul>
+		<!-- 有序列表 -->
+		<ol>有序列表
+			<li>apple</li>
+			<li>banana</li>
+			<li>berry</li>
+		</ol>
+
+		<!-- 输入 一般默认宽度为20字符 -->
+		<form> 
+			文本域 <input type="text" name="content1"><br>
+			密码字段 <input type="password" name="content2"><br>
+			单选按钮<br> 
+			<input type="radio" name="content3">Male<br>
+			<input type="radio" name="content3">Female<br>
+			复选框<br>
+			<input type="checkbox" name="content4">I like apple<br>
+			<input type="checkbox" name="content4">I like cherry<br>
+		</form>
+		下拉菜单（有预选值）<br>
+		What's your favorite fruit?
+		<form action="">
+			<select name="fruit">
+				<option value="apple">apple</option>
+				<option value="pear">pear</option>
+				<option value="banana" selected>banana</option>
+				<option value="watermelon">watermelon</option>
+			</select>
+		</form>
+		不受限制的文本域
+		<textarea name="text" id="text" cols="20" rows="1">this is textarea</textarea> <!-- rows:行 cols:列 -->
+
+		<br>带边框的表单<br>
+		<form action="">
+			<fieldset>
+				<legend>Personal information:</legend>
+				<!-- value:默认值 -->
+				Name: <input type="text" size="30" value="Wenner"><br> 
+				E-mail: <input type="text" size="30"><br>
+				Date of birth: <input type="text" size="10"><br>
+				reset: <input type="reset" value="重置">
+			</fieldset>
+		</form>
+
+		<!-- 脚本 -->
+		<script>
+			document.write("this is javascript")
+		</script>
+
 
 	</body> 
 </html>
