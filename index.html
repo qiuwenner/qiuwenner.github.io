@@ -8,7 +8,7 @@
 		<!-- <meta http-equiv="refresh" content="5"> 每 秒钟刷新当前页面 -->
 
 		<!-- 带log的标题 -->
-		<link rel="icon" href="res/elf.png">
+		<link rel="icon" href="res/pig.png">
 		<title>Wenner's Blog</title> 
 
 		<!-- 使用 <base> 定义页面中所有链接默认的链接目标地址。 -->
@@ -39,24 +39,24 @@
 		
 		<!-- 段落 -->
 		<p>
-			<strong> <!--加粗-->
-			富强 民主 文明 和谐 <br> <!--换行-->
-			自由 平等 公正 法治 <br>
-			爱国 敬业 诚信 友善 <br>  
-			</strong>
+			<div style="text-align: center;">
+				<strong> <!--加粗-->
+					富强 民主 文明 和谐 <br> <!--换行-->
+					自由 平等 公正 法治 <br>
+					爱国 敬业 诚信 友善 <br>  
+				</strong>
+			</div>
 		</p>
 
-		<!-- 链接 -->
+		链接:<br>
 		<a href="https://qiuwenner.github.io" alt="我的博客" target="_blank">这是我的GitHub</a>
 
-		<!-- 上下标 -->
-		<br>
+		<br>上下标:<br>
 		这个文本包含<sub>下标</sub>
 		<br>
 		这个文本包含<sup>上标</sup>
 
-		<!-- 图片 -->
-		<br>
+		<br>图片:<br>
 		<img id="img1" src="res/img1.jpg" alt="社会主义核心价值观" width="150" height="100">
 
 		<!-- 图片链接 -->
@@ -74,7 +74,7 @@
 		<!-- 跳转到指定位置 -->
 		<!-- <a href="#h1">查看社会主义核心价值观图片</a> -->
 
-		<!-- 表格 三行三列 -->
+		表格:<br>
 		<!-- <table> -->
 		<table border="1" cellpadding="10" cellspacing="0"> <!--border:边框 cellpadding:单元格边距 cellspacing:单元格间距 -->
 			<!-- 标题 -->
@@ -94,13 +94,12 @@
 			</tr>
 		</table>
 
-		<!-- 无序列表 -->
 		<ul>无序列表
 			<li>coffee</li>
 			<li>tea</li>
 			<li>milk</li>
 		</ul>
-		<!-- 有序列表 -->
+
 		<ol>有序列表
 			<li>apple</li>
 			<li>banana</li>
@@ -109,16 +108,16 @@
 
 		<!-- 输入 一般默认宽度为20字符 -->
 		<form> 
-			文本域 <input type="text" name="content1"><br>
-			密码字段 <input type="password" name="content2"><br>
-			单选按钮<br> 
+			文本域: <input type="text" name="content1"><br>
+			密码字段: <input type="password" name="content2"><br>
+			单选按钮:<br> 
 			<input type="radio" name="content3">Male<br>
 			<input type="radio" name="content3">Female<br>
-			复选框<br>
+			复选框:<br>
 			<input type="checkbox" name="content4">I like apple<br>
 			<input type="checkbox" name="content4">I like cherry<br>
 		</form>
-		下拉菜单（有预选值）<br>
+		下拉菜单（有预选值）:<br>
 		What's your favorite fruit?
 		<form action="">
 			<select name="fruit">
@@ -128,10 +127,10 @@
 				<option value="watermelon">watermelon</option>
 			</select>
 		</form>
-		不受限制的文本域
+		不受限制的文本域:<br>
 		<textarea name="text" id="text" cols="20" rows="1">this is textarea</textarea> <!-- rows:行 cols:列 -->
 
-		<br>带边框的表单<br>
+		<br>带边框的表单:<br>
 		<form action="">
 			<fieldset>
 				<legend>Personal information:</legend>
@@ -143,11 +142,57 @@
 			</fieldset>
 		</form>
 
-		<!-- 脚本 -->
+		<br>脚本:<br>
 		<script>
 			document.write("this is javascript")
 		</script>
 
+		<br>视频:<br>
+		<button onclick="playPause()">播放/暂停</button>
+		<button onclick="makeBig()">放大</button>
+		<button onclick="makeSmall()">缩小</button>
+		<button onclick="makeNormal()">正常</button>
+		<br>
+		<video id="myVideo" width="320" height="240" controls> <!-- controls:提供播放/暂停按钮 -->
+			<source src="res/bear.mp4" type="video/mp4"> 
+			您的浏览器不支持 video 元素。(浏览器不支持时才会显示)
+		</video>
+		<script>
+			var myVideo = document.getElementById("myVideo");
 
+			function playPause(){ 
+				if (myVideo.paused) 
+				myVideo.play(); 
+				else 
+				myVideo.pause(); 
+			} 
+			function makeBig(){ 
+				myVideo.width=640; 
+				myVideo.hight=480;
+			} 
+			function makeSmall(){ 
+				myVideo.width=160; 
+				myVideo.hight=120;
+			} 
+			function makeNormal(){ 
+				myVideo.width=320; 
+				myVideo.hight=240;
+			} 
+		</script>
+
+		<br>音频:<br>
+		<audio controls>
+			<source src="res/people_sound.mp3" type="audio/mpeg">
+				您的浏览器不支持 audio 元素。(浏览器不支持时才会显示)
+		</audio>
+
+		<br>绘制图形:<br>
+		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #FF0000;">您的浏览器不支持HTML5 canvas 标签</canvas>
+		<script>
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			ctx.fillStyle="#FF0000";
+			ctx.fillRect(0,0,150,75);	
+		</script>
 	</body> 
 </html>
