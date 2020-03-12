@@ -11,68 +11,88 @@
 		<link rel="icon" href="res/pig.png">
 		<title>Wenner's Blog</title> 
 
+		<!-- 链接外部样式表 -->
+		<link rel="stylesheet" href="text/mystyle.css">
+
 		<!-- 使用 <base> 定义页面中所有链接默认的链接目标地址。 -->
 		<!-- <base href="res/" target="_blank">  -->
 
+		<!-- 内部样式表 -->
 		<style> 
 			/* 文字居中 */
-			/* body{text-align:center}  */
-			span{color:red}
+			body
+			{
+				background-color:rgb(172, 175, 172);
+			} 
 		</style> 
 		
 	</head> 
+
 	<body> 
-	<!-- 页面背景颜色 -->
-	<!-- <body style="background-color: bisque;">  -->
-
-		<!-- <div style="color:#40B3DF;">Colors
-			<span style="background-color:#B4009E;color:#00ffff;">Boxes</span>
-		</div> -->
-
-		<!-- 标题 居中-->
-		<h1 align="center">
-			<span id="h1">This is Wenner's Blog</span> 
+		<!-- --------------------------------------------------start-------------------------------------------- -->
+		<!-- 标题-->
+		<h1 class="_h1" id="_h1">
+			<img border="0" src="res/zombie.png" alt="cat" width="50" height="50"> <!-- 原图 98x98 -->
+			This is Wenner's Blog
 		</h1>
+
+		<ul class="topmenu">
+			<li><a href="#home" class="active">Home</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#about">About</a></li>
+		  </ul>
+		  
+		  <div class="clearfix">
+			<div class="column sidemenu">
+			  <ul>
+				<li><a href="#flight">The Flight</a></li>
+				<li><a href="#city" class="active">The City</a></li>
+				<li><a href="#island">The Island</a></li>
+				<li><a href="#food">The Food</a></li>
+				<li><a href="#people">The People</a></li>
+				<li><a href="#history">The History</a></li>
+				<li><a href="#oceans">The Oceans</a></li>
+			  </ul>
+			</div>
+		  
+			<div class="column content">
+			  <div class="header">
+				<h1>The City</h1>
+			  </div>
+			  <h1>Island</h1>
+			  <p>Island is the capital of the Island region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+			  <p>You will learn more about responsive web pages in a later chapter.</p>
+			</div>
+		  </div>
+		  
+		  <div class="footer">
+			<a class="_link" href="https://qiuwenner.github.io" alt="我的博客" target="_blank">本站网址：https://qiuwenner.github.io</a>
+		  </div>
+
+		<!-- --------------------------------------------------end-------------------------------------------- -->
+
 
 		<!-- 分割线 -->
 		<hr/>
-		
+
 		<!-- 段落 -->
 		<p>
-			<div style="text-align: center;">
+			<div class="show_center">
 				<strong> <!--加粗-->
-					富强 民主 文明 和谐 <br> <!--换行-->
+					富强 民主 文明 和谐 <br> 
 					自由 平等 公正 法治 <br>
 					爱国 敬业 诚信 友善 <br>  
 				</strong>
 			</div>
 		</p>
 
-		链接:<br>
-		<a href="https://qiuwenner.github.io" alt="我的博客" target="_blank">这是我的GitHub</a>
-
-		<br>上下标:<br>
-		这个文本包含<sub>下标</sub>
-		<br>
-		这个文本包含<sup>上标</sup>
-
-		<br>图片:<br>
-		<img id="img1" src="res/img1.jpg" alt="社会主义核心价值观" width="150" height="100">
-
-		<!-- 图片链接 -->
-		<p>猫
-			<a href="https://github.com/" target="_blank">
-				<img border="0" src="res/cat.png" alt="cat" width="50" height="50"> <!-- 原图 98x98 -->
+		<!-- 图片（带链接） -->
+		<div class="a_sticky">
+			<a href="https://baike.baidu.com/item/%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82/3271832?fr=aladdin" target="_blank">
+				<img src="res/img1.jpg" alt="社会主义核心价值观" width="350" height="175" style="text-align: center;">
 			</a>
-		</p>
-		<p>狗
-			<a href="https://github.com/" target="_blank">
-				<img border="0" src="res/dog.png" alt="cat" wdth="50" height="50"> 
-			</a>
-		</p>
-
-		<!-- 跳转到指定位置 -->
-		<!-- <a href="#h1">查看社会主义核心价值观图片</a> -->
+		</div>
 
 		表格:<br>
 		<!-- <table> -->
@@ -94,7 +114,7 @@
 			</tr>
 		</table>
 
-		<ul>无序列表
+		<ul class="a">无序列表
 			<li>coffee</li>
 			<li>tea</li>
 			<li>milk</li>
@@ -131,14 +151,15 @@
 		<textarea name="text" id="text" cols="20" rows="1">this is textarea</textarea> <!-- rows:行 cols:列 -->
 
 		<br>带边框的表单:<br>
-		<form action="">
+		<form action="demo-form.php" method="get">
 			<fieldset>
 				<legend>Personal information:</legend>
 				<!-- value:默认值 -->
-				Name: <input type="text" size="30" value="Wenner"><br> 
-				E-mail: <input type="text" size="30"><br>
-				Date of birth: <input type="text" size="10"><br>
-				reset: <input type="reset" value="重置">
+				Name: <input type="text" size="30" value="Wenner" name="myName"><br> 
+				E-mail: <input type="email"><br>
+				Date of birth: <input type="date"><br>
+				reset: <input type="reset" value="重置"><br>
+				<!-- submit: <input type="submit" value="提交"> -->
 			</fieldset>
 		</form>
 
@@ -153,7 +174,7 @@
 		<button onclick="makeSmall()">缩小</button>
 		<button onclick="makeNormal()">正常</button>
 		<br>
-		<video id="myVideo" width="320" height="240" controls> <!-- controls:提供播放/暂停按钮 -->
+		<video id="myVideo" width="320" height="240" controls> <!-- controls:提供播放/暂停按钮 autoplay:自动播放-->
 			<source src="res/bear.mp4" type="video/mp4"> 
 			您的浏览器不支持 video 元素。(浏览器不支持时才会显示)
 		</video>
@@ -183,7 +204,7 @@
 		<br>音频:<br>
 		<audio controls>
 			<source src="res/people_sound.mp3" type="audio/mpeg">
-				您的浏览器不支持 audio 元素。(浏览器不支持时才会显示)
+			您的浏览器不支持 audio 元素。(浏览器不支持时才会显示)
 		</audio>
 
 		<br>绘制图形:<br>
@@ -194,5 +215,17 @@
 			ctx.fillStyle="#FF0000";
 			ctx.fillRect(0,0,150,75);	
 		</script>
+
+		<a href="res/people_sound.mp3" target="_blank">点击播放</a>
+
+		<div class="show_center">
+			<p>this is test</p>
+		</div>
+
+
+		<!-- 跳转到指定位置 -->
+		<div class="b_sticky">
+			<a href="#_h1">回到顶部</a>
+		</div>
 	</body> 
 </html>

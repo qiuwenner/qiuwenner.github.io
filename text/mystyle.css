@@ -1,0 +1,130 @@
+/* --------------------------------------------------start-------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.header {
+    background-color: rgb(81, 161, 226);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.footer {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。
+a:active 必须在 a:hover 之后。 */
+a._link:link {color:#ffffff;} /* 未访问链接*/
+a._link:visited {color:#ffffff;} /* 已访问链接 */
+a._link:hover {color:rgb(186, 214, 121);} /* 鼠标移动到链接上 */
+a._link:active {color:rgb(186, 214, 121);} /* 鼠标点击时 */
+a._link {text-decoration: none;}
+
+.topmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #777;
+}
+.topmenu li {
+    float: left;
+}
+.topmenu li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.topmenu li a:hover {
+    background-color: #222;
+}
+.topmenu li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.sidemenu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.sidemenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sidemenu li a {
+    margin-bottom: 4px;
+    display: block;
+    padding: 8px;
+    background-color: #eee;
+    text-decoration: none;
+    color: #666;
+}
+.sidemenu li a:hover {
+    background-color: #555;
+    color: white;
+}
+.sidemenu li a.active {
+    background-color: #008CBA;
+    color: white;
+}
+/* --------------------------------------------------end-------------------------------------------- */
+
+
+
+h1._h1{
+    color:red; 
+    text-align:center;
+}
+
+p {
+    margin-left:50px;
+}
+
+.show_center{
+    text-align:center;
+}
+
+.show_right{
+    position: absolute;
+    right: 5px;
+    border: 2px solid #4CAF50;
+}
+
+ul.a{
+    list-style-type: circle;
+}
+
+/* 粘性定位 */
+div.a_sticky {
+    position: sticky;
+    top: 0;
+    text-align: right;
+    z-index: 999;
+}
+
+/* 固定定位 */
+div.b_sticky {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+}
