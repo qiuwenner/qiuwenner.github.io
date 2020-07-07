@@ -4,6 +4,10 @@
 body {
     margin: 0;
 }
+.body_div {
+    width: 1000px;
+    margin: auto auto;
+}
 .header {
     background-color: rgb(81, 161, 226);
     color: white;
@@ -13,7 +17,6 @@ body {
 .footer {
     background-color: rgb(189, 192, 194);
     color: white;
-    width: 1300px;
     margin: auto auto;
     padding: 15px;
     text-align: center;
@@ -24,14 +27,13 @@ body {
 .title_img {
     display: block;
     margin: auto auto;
-    width: 1300px;
+    width: 100%;
     height: 200px;
 }
 
 /* 页签部分 */
 .tabs_div {
     margin: auto auto;
-    width: 1300px;
     background-color: rgba(220, 220, 220, 1);
     box-shadow: 8px 8px 5px #888888;
     box-sizing: border-box;
@@ -68,9 +70,9 @@ body {
 .cont {
     overflow: hidden;
     display: none;
-    margin: 10px auto;
+    margin: auto auto;
     top: 0px;
-    width: 95%;
+    /* width: 1000px; */
     border: 2px solid #dcd6d6;
     background-color: #FFF;
 }
@@ -97,13 +99,41 @@ body {
 /* 信息 */
 .info_div {
     display: block;
-    width: 80%;
+    /* width: 1300px; */
     margin-left: 10px;
     /* border: brown solid 3px; */
 }
 
 
 /* 表格 */
-.info_table {
-    display: block;
+.table_title_div {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.info_table
+{
+    border-collapse:collapse;
+    margin-left: 10px;
+}
+.info_table td, .info_table th 
+{
+	border:1px solid #cccccb;
+	padding:3px 7px 2px 7px;
+}
+.info_table th 
+{
+    font-weight: 20;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+    color:#000000;
+    background-color: rgb(235, 233, 233);
+}
+.info_table div {
+    font-size: 20px;
+    margin-left: 5px;
+}
+.info_table p {
+    font-size: 20px;
+    margin-left: 5px;
 }
