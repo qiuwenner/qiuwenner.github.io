@@ -1,29 +1,16 @@
 <!DOCTYPE html> 
-<html>
+<html lang="en">
 	<head> 
 		<meta charset="utf-8" /> <!-- 使用 <meta> 元素来描述HTML文档的描述，关键词，作者，字符集等。 -->
-		<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"> <!-- 为搜索引擎定义关键词 -->
-		<meta name="description" content="免费 Web & 编程 教程"> <!-- 为网页定义描述内容 -->
-		<meta name="author" content="Wenner"> <!-- 定义网页作者 -->
-		<!-- <meta http-equiv="refresh" content="5"> 每 秒钟刷新当前页面 -->
-
-		<!-- 带log的标题 -->
-		<link rel="icon" href="res/pig.png">
-		<title>Wenner's Blog</title> 
 
 		<!-- 链接外部样式表 -->
-		<link rel="stylesheet" href="text/mystyle.css">
-
-		<!-- 使用 <base> 定义页面中所有链接默认的链接目标地址。 -->
-		<!-- <base href="res/" target="_blank">  -->
+		<link rel="stylesheet" href="css/mystyle.css">
 
 		<!-- 内部样式表 -->
 		<style> 
-			/* 文字居中 */
 			body
 			{
 				margin: 0;
-				background: url("res/background.webp") no-repeat center 0px;
 				background-size: auto;
 				background-color:rgb(172, 175, 172);
 			} 
@@ -33,202 +20,67 @@
 
 	<body> 
 		<!-- --------------------------------------------------start-------------------------------------------- -->
-		<!-- 标题-->
-		<h1 class="_h1" id="_h1">
-			<img border="0" src="res/zombie.png" alt="cat" width="50" height="50"> <!-- 原图 98x98 -->
-			This is Wenner's Blog
-		</h1>
+		<div>
+			<img class="title_img" src="images/star sky.webp">
+		</div>
 
-		<ul class="topmenu">
-			<li><a href="#home" class="active">Home</a></li>
-			<li><a href="#news">News</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a href="#about">About</a></li>
-		  </ul>
-		  
-		  <div class="clearfix">
-			<div class="column sidemenu">
-			  <ul>
-				<li><a href="#flight">The Flight</a></li>
-				<li><a href="#city" class="active">The City</a></li>
-				<li><a href="#island">The Island</a></li>
-				<li><a href="#food">The Food</a></li>
-				<li><a href="#people">The People</a></li>
-				<li><a href="#history">The History</a></li>
-				<li><a href="#oceans">The Oceans</a></li>
-			  </ul>
+		<div class="tabs_div">
+			<nav>
+				<a href="#" data-cont="tabs1">首页</a>
+				<a href="#" data-cont="tabs2">星空</a>
+				<a href="#" data-cont="tabs3">向日葵</a>
+			</nav>
+
+			<div class="cont" id="tabs1">
+				<div class="head_img_div">
+					<img src="images/Van Gogh.png" alt="">
+					<div>梵高</div>
+				</div>
+				<div class="info_div">
+					<p style="font-size: 18px; text-align: 10px;"><strong style="font-size: 26px;">&nbsp;&nbsp;梵高</strong>-荷兰后印象派画家</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文森特·威廉·梵·高(Vincent Willem van Gogh，1853-1890)，中文又称"凡高"，荷兰后印象派画家。出生于新教牧师家庭，是后印象主义的先驱，并深深地影响了二十世纪艺术，尤其是野兽派与表现主义。
+					</p> 
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;梵·高早期只以灰暗色系进行创作，直到他在巴黎遇见了印象派与新印象派，融入了他们的鲜艳色彩与画风，创造了他独特的个人画风。他最著名的作品多半是他在生前最后二年创作的，期间梵高深陷于精神疾病中，其最后在他37岁那年将他导向自杀一途。在梵高去世之后，梵高的作品，《星夜》、《向日葵》与《有乌鸦的麦田》等，已跻身于全球最著名最珍贵的艺术作品的行列。 梵高的作品目前主要收纳在法国的奥赛美术馆，以及苏黎世的kunshaus美术馆。					
+					</p>
+				</div>
+				<table border="1" cellpadding="10" cellspacing="0"> <!--border:边框 cellpadding:单元格边距 cellspacing:单元格间距 -->
+					<!-- 标题 -->
+					<caption>table title</caption>
+					<!-- 行 table row-->
+					<tr>
+						<!-- 表头 table head-->
+						<th>Head 1</th>
+						<th>Head 2</th>
+						<th>Head 3</th>
+					</tr>
+					<tr>
+						<!-- 内容 table data -->
+						<td>100</td>
+						<td>200</td>
+						<td>300</td>
+					</tr>
+				</table>
 			</div>
-		  
-			<div class="column content">
-			  <div class="header">
-				<h1>The City</h1>
-			  </div>
-			  <h1>Island</h1>
-			  <p>Island is the capital of the Island region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-			  <p>You will learn more about responsive web pages in a later chapter.</p>
+
+			<div class="cont" id="tabs2">
+				<br>音频:<br>
+				<audio controls>
+					<source src="images/people_sound.mp3" type="audio/mpeg">
+					您的浏览器不支持 audio 元素。(浏览器不支持时才会显示)
+				</audio>
 			</div>
-		  </div>
-		  
-		  <div class="footer">
+
+			<div class="cont" id="tabs3">
+				<p>就看到好客山东换个卡好看的换个卡</p>
+			</div>
+		</div>
+		
+		<!-- 页脚 -->
+		<div class="footer">
 			<a class="_link" href="https://qiuwenner.github.io" alt="我的博客" target="_blank">本站网址：https://qiuwenner.github.io</a>
-		  </div>
-
-		<!-- --------------------------------------------------end-------------------------------------------- -->
-
-
-		<!-- 分割线 -->
-		<hr/>
-
-		<!-- 段落 -->
-		<p>
-			<div class="show_center">
-				<strong> <!--加粗-->
-					富强 民主 文明 和谐 <br> 
-					自由 平等 公正 法治 <br>
-					爱国 敬业 诚信 友善 <br>  
-				</strong>
-			</div>
-		</p>
-
-		<!-- 图片（带链接） -->
-		<div class="a_sticky">
-			<a href="https://baike.baidu.com/item/%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82/3271832?fr=aladdin" target="_blank">
-				<img src="res/img1.jpg" alt="社会主义核心价值观" width="350" height="175" style="text-align: center;">
-			</a>
 		</div>
 
-		表格:<br>
-		<!-- <table> -->
-		<table border="1" cellpadding="10" cellspacing="0"> <!--border:边框 cellpadding:单元格边距 cellspacing:单元格间距 -->
-			<!-- 标题 -->
-			<caption>table title</caption>
-			<!-- 行 table row-->
-			<tr>
-				<!-- 表头 table head-->
-				<th>Head 1</th>
-				<th>Head 2</th>
-				<th>Head 3</th>
-			</tr>
-			<tr>
-				<!-- 内容 table data -->
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-			</tr>
-		</table>
-
-		<ul class="a">无序列表
-			<li>coffee</li>
-			<li>tea</li>
-			<li>milk</li>
-		</ul>
-
-		<ol>有序列表
-			<li>apple</li>
-			<li>banana</li>
-			<li>berry</li>
-		</ol>
-
-		<!-- 输入 一般默认宽度为20字符 -->
-		<form> 
-			文本域: <input type="text" name="content1"><br>
-			密码字段: <input type="password" name="content2"><br>
-			单选按钮:<br> 
-			<input type="radio" name="content3">Male<br>
-			<input type="radio" name="content3">Female<br>
-			复选框:<br>
-			<input type="checkbox" name="content4">I like apple<br>
-			<input type="checkbox" name="content4">I like cherry<br>
-		</form>
-		下拉菜单（有预选值）:<br>
-		What's your favorite fruit?
-		<form action="">
-			<select name="fruit">
-				<option value="apple">apple</option>
-				<option value="pear">pear</option>
-				<option value="banana" selected>banana</option>
-				<option value="watermelon">watermelon</option>
-			</select>
-		</form>
-		不受限制的文本域:<br>
-		<textarea name="text" id="text" cols="20" rows="1">this is textarea</textarea> <!-- rows:行 cols:列 -->
-
-		<br>带边框的表单:<br>
-		<form action="demo-form.php" method="get">
-			<fieldset>
-				<legend>Personal information:</legend>
-				<!-- value:默认值 -->
-				Name: <input type="text" size="30" value="Wenner" name="myName"><br> 
-				E-mail: <input type="email"><br>
-				Date of birth: <input type="date"><br>
-				reset: <input type="reset" value="重置"><br>
-				<!-- submit: <input type="submit" value="提交"> -->
-			</fieldset>
-		</form>
-
-		<br>脚本:<br>
-		<script>
-			document.write("this is javascript")
-		</script>
-
-		<br>视频:<br>
-		<button onclick="playPause()">播放/暂停</button>
-		<button onclick="makeBig()">放大</button>
-		<button onclick="makeSmall()">缩小</button>
-		<button onclick="makeNormal()">正常</button>
-		<br>
-		<video id="myVideo" width="320" height="240" controls> <!-- controls:提供播放/暂停按钮 autoplay:自动播放-->
-			<source src="res/bear.mp4" type="video/mp4"> 
-			您的浏览器不支持 video 元素。(浏览器不支持时才会显示)
-		</video>
-		<script>
-			var myVideo = document.getElementById("myVideo");
-
-			function playPause(){ 
-				if (myVideo.paused) 
-				myVideo.play(); 
-				else 
-				myVideo.pause(); 
-			} 
-			function makeBig(){ 
-				myVideo.width=640; 
-				myVideo.hight=480;
-			} 
-			function makeSmall(){ 
-				myVideo.width=160; 
-				myVideo.hight=120;
-			} 
-			function makeNormal(){ 
-				myVideo.width=320; 
-				myVideo.hight=240;
-			} 
-		</script>
-
-		<br>音频:<br>
-		<audio controls>
-			<source src="res/people_sound.mp3" type="audio/mpeg">
-			您的浏览器不支持 audio 元素。(浏览器不支持时才会显示)
-		</audio>
-
-		<br>绘制图形:<br>
-		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #FF0000;">您的浏览器不支持HTML5 canvas 标签</canvas>
-		<script>
-			var c=document.getElementById("myCanvas");
-			var ctx=c.getContext("2d");
-			ctx.fillStyle="#FF0000";
-			ctx.fillRect(0,0,150,75);	
-		</script>
-
-		<a href="res/people_sound.mp3" target="_blank">点击播放</a>
-
-		<div class="show_center">
-			<p>this is test</p>
-		</div>
-
-
-		<!-- 跳转到指定位置 -->
-		<div class="b_sticky">
-			<a href="#_h1">回到顶部</a>
-		</div>
-	</body> 
+		<!-- 函数 -->
+		<script src="js/myScript.js"></script>
+    </body>
 </html>

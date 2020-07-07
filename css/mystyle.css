@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.header {
+    background-color: rgb(81, 161, 226);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.footer {
+    background-color: rgb(189, 192, 194);
+    color: white;
+    width: 1300px;
+    margin: auto auto;
+    padding: 15px;
+    text-align: center;
+    position: static;
+}
+
+/* 抬头背景 */
+.title_img {
+    display: block;
+    margin: auto auto;
+    width: 1300px;
+    height: 200px;
+}
+
+/* 页签部分 */
+.tabs_div {
+    margin: auto auto;
+    width: 1300px;
+    background-color: rgba(220, 220, 220, 1);
+    box-shadow: 8px 8px 5px #888888;
+    box-sizing: border-box;
+}
+
+.tabs_div nav {
+    display: flex;
+    height: 60px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #b0ffed;
+    left: 50px;
+}
+.tabs_div nav a {
+    display: block;
+    width: 150px;
+    height: 100%;
+    border-right: 1px solid #FFF;
+    color: #518dc2;
+    padding: 20px;
+    text-decoration: none;
+}
+.tabs_div nav a:last-child {
+    border-right: 0 none;
+}
+.tabs_div nav a:hover {
+    background-color: rgb(77, 85, 76);
+}
+.tabs_div nav a.active {
+    background-color: #c4f07d;
+}
+
+/* 页签内容 */
+.cont {
+    overflow: hidden;
+    display: none;
+    margin: 10px auto;
+    top: 0px;
+    width: 95%;
+    border: 2px solid #dcd6d6;
+    background-color: #FFF;
+}
+
+/* 头像 */
+.head_img_div {
+    display: block;
+    float: right;
+    height: 280px;
+    background-color: rgb(244, 238, 238);
+    box-shadow: 5px 5px 3px #888888;
+}
+.head_img_div img {
+    width: 207px;
+    height: 252px;
+}
+.head_img_div div {
+    position: relative;
+    left: 5px;
+    bottom: 2px;
+    font-size: 14px;
+    color: black;
+}
+/* 信息 */
+.info_div {
+    display: block;
+    width: 80%;
+    margin-left: 10px;
+    /* border: brown solid 3px; */
+}
+
+
+/* 表格 */
+.info_table {
+    display: block;
+}
