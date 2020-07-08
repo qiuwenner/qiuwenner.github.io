@@ -35,4 +35,4 @@ function selectedTab(key) {
     }
 }
 
-selectedTab(2)
+selectedTab(0)
