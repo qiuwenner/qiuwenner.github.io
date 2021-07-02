@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title>海贼王</title>
+    <link href="css/style.css"  rel="stylesheet"/>
+
+</head>
+
+<body>
+<div id="wrapper">
+   <div id="menu">
+        <ul>
+           <li><a href="index.html" >海贼王</a></li>
+            <li><a href="jieshao.html" >故事介绍</a></li>
+            <li><a href="renwu.html" >主要人物</a></li>
+            <li><a href="meitu.html" >海贼美图</a></li>
+            <li><a href="liuyan.html" >海贼王图片</a></li>
+            <li><a href="zhuce.html" >注册用户</a></li>
+
+        </ul>
+    </div>
+    <div id="header">
+        <span id="cg">2016/12/24 上午12：00：00</span>
+    </div>
+    <script> 
+    function checkUser(){
+        var username =document.getElementById("username").value;
+        if(username==""){
+            alert("账号不能为空!请重新写！");
+            return false;
+        } else{
+            document.getElementById("tishiUsername").innerHTML="";
+        }
+        var pwd=document.getElementById("pwd").value;
+        if(pwd==""){
+            return false;
+        }else{
+            document.getElementById("tishiPwd").innerHTML="";
+            var reg=/^[0-9]{6}$/;
+            if(!reg.test(pwd)){
+                alert("密码只能为6位数！请重新填写！");
+                return false;
+            }
+        }
+        var repwd=document.getElementById("repwd").value;
+        if(pwd !=repwd){
+            alert("两次密码不一样！请重新填写！");
+            return false;
+        }
+        var email=document.getElementById("email").value;
+        var reg = /^([a-zA-Z0-9._-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+        if(!reg.test(email)){
+            alert("邮箱格式错误！请重新填写！");
+            return false;
+        }
+        // window.location.href="index.html";
+        alert("注册成功");
+        return true;
+    }
+</script>
+
+<div id="cont" style=" line-height:40px;"><br>
+    <h2 style=" font-size:30px; font-weight:normal; color:#f00; text-align:center;">注册</h2>
+    <table width="550" border="0" cellspacing="20" cellpadding="15" style="margin:20px auto;">
+        <form action="index.html" method="get" align="center" onsubmit="return false" position="bottom">
+            <center>
+                <p>账号：<input name="username" id="username"> <span>*</span><span id="tishiUsername"></span></p>
+                <p>密码：<input type="password" name="password" id="pwd"> <span>*</span><span id="tishiPwd"></span></p>
+                <p>确认：<input type="password"  id="repwd" id="repwd"> <span>*</span><span id="tishiRepwd"></span></p>
+                <p>邮箱：<input name="email" id="email"> <span>*</span><span id="tishiEmail"></span></p>
+                <p><input type="submit" value="登陆" onclick="checkUser()"> </p>
+            </center>
+        </form>
+    </table>
+</div>
+
+<P style=" text-align:center;margin:20px 0;color:#000;">版权所有常灿灿</P>
+</body>
+</html>
